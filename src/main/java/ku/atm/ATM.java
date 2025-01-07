@@ -24,6 +24,7 @@ public class ATM {
 	}
 
 	public void deposit(double value) {
+		if (value < 0) throw new IllegalArgumentException("value must be positive");
 		if (currentAccount != null)
             currentAccount.deposit(value);
 	}

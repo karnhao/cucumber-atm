@@ -70,4 +70,12 @@ public class StepDefATM {
                      bank.getCustomer(id).getAccount().getBalance());
     }
 
+    @When("I deposit {int} to ATM")
+    public void I_deposit_to_ATM(int i) {
+        try {
+            atm.deposit(i);
+        } catch (Exception ignored) {
+        }
+    }
+
 }
